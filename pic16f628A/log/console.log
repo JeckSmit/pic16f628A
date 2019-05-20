@@ -1,0 +1,503 @@
+Design: Design pic16f628A already active.
+
+DESIGN: Default Design Language: VERILOG
+DESIGN: Default BDE Language: VERILOG
+DESIGN: C-Synthesis: Not Defined
+DESIGN: HDL Synthesis: Not Defined
+DESIGN: Physical Synthesis: Not Defined
+DESIGN: Implementation: Not Defined
+alog -O2 -sve  -work pic16f628A $dsn/src/ALU.v $dsn/src/P16F628A.v $dsn/src/P16F628A_IDec.v $dsn/src/TestBench/P16F628A_TB.v
+Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+Compile...
+Pass 1. Scanning modules hierarchy.
+Info: VCP2876 ALU.v : (193, 1): Implicit net declaration, symbol C_In has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (194, 1): Implicit net declaration, symbol B_Inv has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (195, 1): Implicit net declaration, symbol B_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (196, 1): Implicit net declaration, symbol A_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (240, 1): Implicit net declaration, symbol Set has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (241, 1): Implicit net declaration, symbol Tst has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (292, 1): Implicit net declaration, symbol WE_W has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (304, 1): Implicit net declaration, symbol Z_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (318, 1): Implicit net declaration, symbol DC_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (331, 1): Implicit net declaration, symbol C_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (332, 1): Implicit net declaration, symbol S_Dir has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (333, 1): Implicit net declaration, symbol C_Drv has not been declared in module P16F628A_ALU.
+Info: VCP2876 P16F628A.v : (323, 1): Implicit net declaration, symbol LITERAL has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (327, 1): Implicit net declaration, symbol Tst has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (338, 1): Implicit net declaration, symbol INDF has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (345, 1): Implicit net declaration, symbol WE_F has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (385, 1): Implicit net declaration, symbol Ld_PCL has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (487, 1): Implicit net declaration, symbol WE_RAMA has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (501, 1): Implicit net declaration, symbol WE_RAMB has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (575, 1): Implicit net declaration, symbol WDT_Rst has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (630, 1): Implicit net declaration, symbol Tmr0_CS has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (636, 1): Implicit net declaration, symbol Rst_PSC has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (637, 1): Implicit net declaration, symbol CE_PSCntr has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (681, 1): Implicit net declaration, symbol CE_Tmr0 has not been declared in module P16F628A.
+Warning: VCP2515 P16F628A_TB.v : (190, 1): Undefined module: P16C5x was used. Port connection rules will not be checked at such instantiations.
+Warning: VCP2515 P16F628A.v : (281, 1): Undefined module: P16C5x_IDec was used. Port connection rules will not be checked at such instantiations.
+Warning: VCP2515 P16F628A.v : (305, 1): Undefined module: P16C5x_ALU was used. Port connection rules will not be checked at such instantiations.
+Pass 2. Processing instantiations.
+Pass 3. Processing behavioral statements.
+Running Optimizer.
+ELB/DAG code generating.
+Unit top modules: P16F628A_ALU P16F628A P16F628A_IDec tb_P16F628A.
+$root top modules: P16F628A_ALU P16F628A P16F628A_IDec tb_P16F628A.
+Compile success 0 Errors 3 Warnings  Analysis time: 0[s].
+done
+SetActiveLib -work
+#Compiling UUT module design files
+
+comp -include "$dsn\src\TestBench\P16F628A_TB.v"
+Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+Compile...
+Pass 1. Scanning modules hierarchy.
+Info: VCP2113 Module \$root found in current working library.
+Warning: VCP2515 P16F628A_TB.v : (190, 1): Undefined module: P16C5x was used. Port connection rules will not be checked at such instantiations.
+Pass 2. Processing instantiations.
+Pass 3. Processing behavioral statements.
+Running Optimizer.
+ELB/DAG code generating.
+Info: VCP2113 Module \$root found in current working library.
+Info: VCP2113 Module P16F628A_ALU found in current working library.
+Info: VCP2113 Module P16F628A found in current working library.
+Info: VCP2113 Module P16F628A_IDec found in current working library.
+Unit top modules: tb_P16F628A.
+$root top modules: P16F628A_ALU P16F628A P16F628A_IDec tb_P16F628A.
+Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
+done
+asim +access +r tb_P16F628A
+ELBREAD: Elaboration process.
+ELBREAD: Error: Design unit P16C5x instantiated in pic16f628a.tb_P16F628A not found in searched libraries: pic16f628A, pic16f628a.
+ELBREAD: Error: Elaboration process completed with errors.
+Design: Error: Elaboration failed
+Error: asim: cannot select specified top-level
+Error: DO_001 in file c:\My_Designs\pic16f628A\pic16f628A\src\TestBench\P16F628A_TB_runtest.do line 5
+Error: Cannot run c:\My_Designs\pic16f628A\pic16f628A\src\TestBench\P16F628A_TB_runtest.do
+Design: Design pic16f628A already active.
+
+ELBREAD: Elaboration process.
+ELBREAD: Error: Design unit P16C5x instantiated in pic16f628a.tb_P16F628A not found in searched libraries: pic16f628A, pic16f628a.
+ELBREAD: Error: Elaboration process completed with errors.
+Design: Error: Elaboration failed
+ELBREAD: Elaboration process.
+ELBREAD: Error: Design unit P16C5x instantiated in pic16f628a.tb_P16F628A not found in searched libraries: pic16f628A, pic16f628a.
+ELBREAD: Error: Elaboration process completed with errors.
+Design: Error: Elaboration failed
+alog -O2 -sve  -work pic16f628A $dsn/src/ALU.v $dsn/src/P16F628A.v $dsn/src/P16F628A_IDec.v $dsn/src/TestBench/P16F628A_TB.v
+Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+Compile...
+Pass 1. Scanning modules hierarchy.
+Info: VCP2113 Module \$root found in current working library.
+Info: VCP2876 ALU.v : (193, 1): Implicit net declaration, symbol C_In has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (194, 1): Implicit net declaration, symbol B_Inv has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (195, 1): Implicit net declaration, symbol B_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (196, 1): Implicit net declaration, symbol A_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (240, 1): Implicit net declaration, symbol Set has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (241, 1): Implicit net declaration, symbol Tst has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (292, 1): Implicit net declaration, symbol WE_W has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (304, 1): Implicit net declaration, symbol Z_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (318, 1): Implicit net declaration, symbol DC_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (331, 1): Implicit net declaration, symbol C_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (332, 1): Implicit net declaration, symbol S_Dir has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (333, 1): Implicit net declaration, symbol C_Drv has not been declared in module P16F628A_ALU.
+Info: VCP2876 P16F628A.v : (323, 1): Implicit net declaration, symbol LITERAL has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (327, 1): Implicit net declaration, symbol Tst has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (338, 1): Implicit net declaration, symbol INDF has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (345, 1): Implicit net declaration, symbol WE_F has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (385, 1): Implicit net declaration, symbol Ld_PCL has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (487, 1): Implicit net declaration, symbol WE_RAMA has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (501, 1): Implicit net declaration, symbol WE_RAMB has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (575, 1): Implicit net declaration, symbol WDT_Rst has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (630, 1): Implicit net declaration, symbol Tmr0_CS has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (636, 1): Implicit net declaration, symbol Rst_PSC has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (637, 1): Implicit net declaration, symbol CE_PSCntr has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (681, 1): Implicit net declaration, symbol CE_Tmr0 has not been declared in module P16F628A.
+Warning: VCP2515 P16F628A.v : (281, 1): Undefined module: P16C5x_IDec was used. Port connection rules will not be checked at such instantiations.
+Warning: VCP2515 P16F628A.v : (305, 1): Undefined module: P16C5x_ALU was used. Port connection rules will not be checked at such instantiations.
+Pass 2. Processing instantiations.
+Pass 3. Processing behavioral statements.
+Running Optimizer.
+ELB/DAG code generating.
+Info: VCP2113 Module \$root found in current working library.
+Unit top modules: P16F628A_ALU P16F628A_IDec tb_P16F628A.
+$root top modules: P16F628A_ALU P16F628A_IDec tb_P16F628A.
+Compile success 0 Errors 2 Warnings  Analysis time: 0[s].
+done
+SetActiveLib -work
+#Compiling UUT module design files
+
+comp -include "$dsn\src\TestBench\P16F628A_TB.v"
+Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+Compile...
+Pass 1. Scanning modules hierarchy.
+Info: VCP2113 Module \$root found in current working library.
+Info: VCP2113 Module P16F628A found in current working library.
+Pass 2. Processing instantiations.
+Pass 3. Processing behavioral statements.
+Running Optimizer.
+ELB/DAG code generating.
+Info: VCP2113 Module \$root found in current working library.
+Info: VCP2113 Module P16F628A_ALU found in current working library.
+Info: VCP2113 Module P16F628A_IDec found in current working library.
+Unit top modules: tb_P16F628A.
+$root top modules: P16F628A_ALU P16F628A_IDec tb_P16F628A.
+Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+done
+asim +access +r tb_P16F628A
+ELBREAD: Elaboration process.
+ELBREAD: Error: Design unit P16C5x_IDec instantiated in pic16f628a.P16F628A not found in searched libraries: pic16f628A, pic16f628a.
+ELBREAD: Error: Elaboration process completed with errors.
+Design: Error: Elaboration failed
+Error: asim: cannot select specified top-level
+Error: DO_001 in file c:\My_Designs\pic16f628A\pic16f628A\src\TestBench\P16F628A_TB_runtest.do line 5
+Error: Cannot run c:\My_Designs\pic16f628A\pic16f628A\src\TestBench\P16F628A_TB_runtest.do
+Design: Design pic16f628A already active.
+
+ELBREAD: Elaboration process.
+ELBREAD: Error: Design unit P16C5x_IDec instantiated in pic16f628a.P16F628A not found in searched libraries: pic16f628A, pic16f628a.
+ELBREAD: Error: Elaboration process completed with errors.
+Design: Error: Elaboration failed
+SetActiveLib -work
+#Compiling UUT module design files
+
+comp -include "$dsn\src\TestBench\P16F628A_TB.v"
+Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+Compile...
+Pass 1. Scanning modules hierarchy.
+Info: VCP2113 Module \$root found in current working library.
+Info: VCP2113 Module P16F628A found in current working library.
+Pass 2. Processing instantiations.
+Pass 3. Processing behavioral statements.
+Running Optimizer.
+ELB/DAG code generating.
+Info: VCP2113 Module \$root found in current working library.
+Info: VCP2113 Module P16F628A_ALU found in current working library.
+Info: VCP2113 Module P16F628A_IDec found in current working library.
+Unit top modules: tb_P16F628A.
+$root top modules: P16F628A_ALU P16F628A_IDec tb_P16F628A.
+Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+done
+asim +access +r tb_P16F628A
+ELBREAD: Elaboration process.
+ELBREAD: Error: Design unit P16C5x_IDec instantiated in pic16f628a.P16F628A not found in searched libraries: pic16f628A, pic16f628a.
+ELBREAD: Error: Elaboration process completed with errors.
+Design: Error: Elaboration failed
+Error: asim: cannot select specified top-level
+Error: DO_001 in file c:\My_Designs\pic16f628A\pic16f628A\src\TestBench\P16F628A_TB_runtest.do line 5
+Error: Cannot run c:\My_Designs\pic16f628A\pic16f628A\src\TestBench\P16F628A_TB_runtest.do
+alog -O2 -sve  -work pic16f628A $dsn/src/ALU.v $dsn/src/P16F628A.v $dsn/src/P16F628A_IDec.v $dsn/src/TestBench/P16F628A_TB.v
+Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+Compile...
+Pass 1. Scanning modules hierarchy.
+Info: VCP2113 Module \$root found in current working library.
+Info: VCP2876 ALU.v : (193, 1): Implicit net declaration, symbol C_In has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (194, 1): Implicit net declaration, symbol B_Inv has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (195, 1): Implicit net declaration, symbol B_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (196, 1): Implicit net declaration, symbol A_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (240, 1): Implicit net declaration, symbol Set has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (241, 1): Implicit net declaration, symbol Tst has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (292, 1): Implicit net declaration, symbol WE_W has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (304, 1): Implicit net declaration, symbol Z_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (318, 1): Implicit net declaration, symbol DC_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (331, 1): Implicit net declaration, symbol C_Sel has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (332, 1): Implicit net declaration, symbol S_Dir has not been declared in module P16F628A_ALU.
+Info: VCP2876 ALU.v : (333, 1): Implicit net declaration, symbol C_Drv has not been declared in module P16F628A_ALU.
+Info: VCP2876 P16F628A.v : (323, 1): Implicit net declaration, symbol LITERAL has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (327, 1): Implicit net declaration, symbol Tst has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (338, 1): Implicit net declaration, symbol INDF has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (345, 1): Implicit net declaration, symbol WE_F has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (385, 1): Implicit net declaration, symbol Ld_PCL has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (487, 1): Implicit net declaration, symbol WE_RAMA has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (501, 1): Implicit net declaration, symbol WE_RAMB has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (575, 1): Implicit net declaration, symbol WDT_Rst has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (630, 1): Implicit net declaration, symbol Tmr0_CS has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (636, 1): Implicit net declaration, symbol Rst_PSC has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (637, 1): Implicit net declaration, symbol CE_PSCntr has not been declared in module P16F628A.
+Info: VCP2876 P16F628A.v : (681, 1): Implicit net declaration, symbol CE_Tmr0 has not been declared in module P16F628A.
+Pass 2. Processing instantiations.
+Pass 3. Processing behavioral statements.
+Running Optimizer.
+ELB/DAG code generating.
+Info: VCP2113 Module \$root found in current working library.
+Unit top modules: tb_P16F628A.
+$root top modules: tb_P16F628A.
+Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+done
+SetActiveLib -work
+#Compiling UUT module design files
+
+comp -include "$dsn\src\TestBench\P16F628A_TB.v"
+Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+Compile...
+Pass 1. Scanning modules hierarchy.
+Info: VCP2113 Module \$root found in current working library.
+Info: VCP2113 Module P16F628A found in current working library.
+Info: VCP2113 Module P16F628A_IDec found in current working library.
+Info: VCP2113 Module P16F628A_ALU found in current working library.
+Info: VCP2113 Module P16F628A_IDec found in current working library.
+Info: VCP2113 Module P16F628A_ALU found in current working library.
+Pass 2. Processing instantiations.
+Pass 3. Processing behavioral statements.
+Running Optimizer.
+ELB/DAG code generating.
+Info: VCP2113 Module \$root found in current working library.
+Unit top modules: tb_P16F628A.
+$root top modules: tb_P16F628A.
+Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+done
+asim +access +r tb_P16F628A
+ELBREAD: Elaboration process.
+ELBREAD: Elaboration time 0.0 [s].
+asim: Stack memory: 32MB
+asim: Retval memory: 32MB
+KERNEL: Main thread initiated.
+KERNEL: Kernel process initialization phase.
+KERNEL: Time resolution set to 1ps.
+ELAB2: Elaboration final pass...
+KERNEL: PLI/VHPI kernel's engine initialization done.
+PLI: Loading library 'C:\Aldec\Active-HDL 9.1\bin\systf.dll'
+ELAB2: Create instances ...
+ELAB2: Create instances complete.
+SLP: Started
+SLP: Elaboration phase ...
+SLP: Warning: P16F628A_TB.v (135): Length of connection (7) does not match the length of port 'FA' (8) on instance '/tb_P16F628A/uut'.
+SLP: Elaboration phase ... done : 0.1 [s]
+SLP: Generation phase ...
+SLP: Generation phase ... done : 1.1 [s]
+SLP: Finished : 1.2 [s]
+SLP: 0 primitives and 115 (100.00%) other processes in SLP
+SLP: 190 (98.96%) signals in SLP and 2 (1.04%) interface signals
+ELAB2: Elaboration final pass complete - time: 1.3 [s].
+KERNEL: SLP loading done - time: 0.2 [s].
+KERNEL: SLP simulation initialization done - time: 0.0 [s].
+KERNEL: Kernel process initialization done.
+Allocation: Simulator allocated 5319 kB (elbread=1023 elab2=4205 kernel=91 sdf=0)
+KERNEL: ASDB file was created in location c:\My_Designs\pic16f628A\pic16f628A\src\wave.asdb
+ 02:19, понедельник, 20 мая 2019 г.
+ Simulation has been initialized
+ Selected Top-Level: tb_P16F628A (tb_P16F628A)
+
+wave
+wave -noreg POR
+wave -noreg Clk
+wave -noreg ClkEn
+wave -noreg MCLR
+wave -noreg T0CKI
+wave -noreg WDTE
+wave -noreg PC
+wave -noreg ROM
+wave -noreg WE_TRISA
+wave -noreg WE_TRISB
+wave -noreg WE_TRISC
+wave -noreg WE_PORTA
+wave -noreg WE_PORTB
+wave -noreg WE_PORTC
+wave -noreg RE_PORTA
+wave -noreg RE_PORTB
+wave -noreg RE_PORTC
+wave -noreg IO_DO
+wave -noreg IO_DI
+wave -noreg Rst
+wave -noreg OPTION
+wave -noreg IR
+wave -noreg dIR
+wave -noreg ALU_Op
+wave -noreg KI
+wave -noreg Err
+wave -noreg Skip
+wave -noreg TOS
+wave -noreg NOS
+wave -noreg W
+wave -noreg FA
+wave -noreg DO
+wave -noreg DI
+wave -noreg TMR0
+wave -noreg FSR
+wave -noreg STATUS
+wave -noreg T0CKI_Pls
+wave -noreg WDTClr
+wave -noreg WDT
+wave -noreg WDT_TC
+wave -noreg WDT_TO
+wave -noreg PSCntr
+wave -noreg PSC_Pls
+
+run
+43 signal(s) traced.
+PLI: $readmemh(P16F628A.v:490): Could not open file "Src/RAMA.coe" for reading [systf:CMN9]
+PLI: $readmemh(P16F628A.v:504): Could not open file "Src/RAMB.coe" for reading [systf:CMN9]
+endsim
+KERNEL: stopped at time: 44467311 ns
+ Simulation has been stopped
+
+#End simulation macro
+asim -O5 +access +r +m+tb_P16F628A tb_P16F628A
+ELBREAD: Elaboration process.
+ELBREAD: Elaboration time 0.0 [s].
+asim: Stack memory: 32MB
+asim: Retval memory: 32MB
+KERNEL: Main thread initiated.
+KERNEL: Kernel process initialization phase.
+KERNEL: Time resolution set to 1ps.
+ELAB2: Elaboration final pass...
+KERNEL: PLI/VHPI kernel's engine initialization done.
+PLI: Loading library 'C:\Aldec\Active-HDL 9.1\bin\systf.dll'
+ELAB2: Create instances ...
+ELAB2: Create instances complete.
+SLP: Started
+SLP: Elaboration phase ...
+SLP: Warning: P16F628A_TB.v (135): Length of connection (7) does not match the length of port 'FA' (8) on instance '/tb_P16F628A/uut'.
+SLP: Elaboration phase ... done : 0.1 [s]
+SLP: Generation phase ...
+SLP: Generation phase ... done : 1.2 [s]
+SLP: Finished : 1.3 [s]
+SLP: 0 primitives and 115 (100.00%) other processes in SLP
+SLP: 190 (98.96%) signals in SLP and 2 (1.04%) interface signals
+ELAB2: Elaboration final pass complete - time: 1.3 [s].
+KERNEL: SLP loading done - time: 0.2 [s].
+KERNEL: SLP simulation initialization done - time: 0.0 [s].
+KERNEL: Kernel process initialization done.
+Allocation: Simulator allocated 5319 kB (elbread=1023 elab2=4205 kernel=91 sdf=0)
+KERNEL: ASDB file was created in location c:\My_Designs\pic16f628A\pic16f628A\src\wave.asdb
+ 02:19, понедельник, 20 мая 2019 г.
+ Simulation has been initialized
+ Selected Top-Level: tb_P16F628A (tb_P16F628A)
+run 100 ns
+PLI: $readmemh(P16F628A.v:490): Could not open file "Src/RAMA.coe" for reading [systf:CMN9]
+PLI: $readmemh(P16F628A.v:504): Could not open file "Src/RAMB.coe" for reading [systf:CMN9]
+KERNEL: stopped at time: 100 ns
+43 signal(s) traced.
+run 100 ns
+KERNEL: stopped at time: 200 ns
+run 100 ns
+KERNEL: stopped at time: 300 ns
+run 100 ns
+KERNEL: stopped at time: 400 ns
+run 100 ns
+KERNEL: stopped at time: 500 ns
+run 100 ns
+KERNEL: stopped at time: 600 ns
+run 100 ns
+KERNEL: stopped at time: 700 ns
+run 100 ns
+KERNEL: stopped at time: 800 ns
+run 100 ns
+KERNEL: stopped at time: 900 ns
+run 100 ns
+KERNEL: stopped at time: 1 us
+run 100 ns
+KERNEL: stopped at time: 1100 ns
+run 100 ns
+KERNEL: stopped at time: 1200 ns
+run 10000 ns
+KERNEL: stopped at time: 11200 ns
+run 10000 ns
+KERNEL: stopped at time: 21200 ns
+run 10000 ns
+KERNEL: stopped at time: 31200 ns
+run 10000 ns
+KERNEL: stopped at time: 41200 ns
+run 10000 ns
+KERNEL: stopped at time: 51200 ns
+run 10000 ns
+KERNEL: stopped at time: 61200 ns
+run 10000 ns
+KERNEL: stopped at time: 71200 ns
+run 10000 ns
+KERNEL: stopped at time: 81200 ns
+run 10000 ns
+KERNEL: stopped at time: 91200 ns
+run 10000 ns
+KERNEL: stopped at time: 101200 ns
+run 10000 ns
+KERNEL: stopped at time: 111200 ns
+run 10000 ns
+KERNEL: stopped at time: 121200 ns
+run 10000 ns
+KERNEL: stopped at time: 131200 ns
+run 10000 ns
+KERNEL: stopped at time: 141200 ns
+run 10000 ns
+KERNEL: stopped at time: 151200 ns
+run 10000 ns
+KERNEL: stopped at time: 161200 ns
+run 10000 ns
+KERNEL: stopped at time: 171200 ns
+run 10000 ns
+KERNEL: stopped at time: 181200 ns
+run 10000 ns
+KERNEL: stopped at time: 191200 ns
+run 10000 ns
+KERNEL: stopped at time: 201200 ns
+run 10000 ns
+KERNEL: stopped at time: 211200 ns
+run 10000 ns
+KERNEL: stopped at time: 221200 ns
+run 10000 ns
+KERNEL: stopped at time: 231200 ns
+run 10000 ns
+KERNEL: stopped at time: 241200 ns
+run 10000 ns
+KERNEL: stopped at time: 251200 ns
+run 10000 ns
+KERNEL: stopped at time: 261200 ns
+run 10000 ns
+KERNEL: stopped at time: 271200 ns
+run 10000 ns
+KERNEL: stopped at time: 281200 ns
+run 10000 ns
+KERNEL: stopped at time: 291200 ns
+run 10000 ns
+KERNEL: stopped at time: 301200 ns
+run 10000 ns
+KERNEL: stopped at time: 311200 ns
+run 10000 ns
+KERNEL: stopped at time: 321200 ns
+run 10000 ns
+KERNEL: stopped at time: 331200 ns
+run 10000 ns
+KERNEL: stopped at time: 341200 ns
+run 10000 ns
+KERNEL: stopped at time: 351200 ns
+run 10000 ns
+KERNEL: stopped at time: 361200 ns
+run 10000 ns
+KERNEL: stopped at time: 371200 ns
+run 10000 ns
+KERNEL: stopped at time: 381200 ns
+run 10000 ns
+KERNEL: stopped at time: 391200 ns
+run 10000 ns
+KERNEL: stopped at time: 401200 ns
+run 10000 ns
+KERNEL: stopped at time: 411200 ns
+run 10000 ns
+KERNEL: stopped at time: 421200 ns
+run 10000 ns
+KERNEL: stopped at time: 431200 ns
+run 10000 ns
+KERNEL: stopped at time: 441200 ns
+run 10000 ns
+KERNEL: stopped at time: 451200 ns
+run 10000 ns
+KERNEL: stopped at time: 461200 ns
+run 10000 ns
+KERNEL: stopped at time: 471200 ns
+run 10000 ns
+KERNEL: stopped at time: 481200 ns
+run 10000 ns
+KERNEL: stopped at time: 491200 ns
+run 10000 ns
+KERNEL: stopped at time: 501200 ns
+run 10000 ns
+KERNEL: stopped at time: 511200 ns
+run 10000 ns
+KERNEL: stopped at time: 521200 ns
+run 10000 ns
+KERNEL: stopped at time: 531200 ns
+run 10000 ns
+KERNEL: stopped at time: 541200 ns
+run 10000 ns
+KERNEL: stopped at time: 551200 ns
+ Simulation has been stopped

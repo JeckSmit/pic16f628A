@@ -1,0 +1,12 @@
+[Version]
+Version=9.1
+[Designs]
+pic16f628a=.\pic16f628A\pic16f628A.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+pic16f628a=1

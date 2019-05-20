@@ -1,0 +1,4 @@
+.\src\ALU.v
+.\src\P16F628A.v
+.\src\P16F628A_IDec.v
+.\src\TestBench\P16F628A_TB.v

@@ -1,0 +1,1 @@
+ -erf "c:\My_Designs\pic16f628A\pic16f628A\compile\pic16f628A.erf" -work pic16f628A -lc c:/My_Designs/pic16f628A/library.cfg -fl c:/My_Designs/pic16f628A/pic16f628A/projlib.cfg -o c:/My_Designs/pic16f628A/pic16f628A/compile -l "pic16f628A" -sve   -O2
